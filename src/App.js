@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import Login from './components/Login';
 import AdminLogin from './components/AdminLogin';
+import AdminServices from './components/AdminServices';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/login" element={<Login />} />
+        <Route path='/admin-services' element={<AdminServices />} />
       </Routes>
     </BrowserRouter>
   );

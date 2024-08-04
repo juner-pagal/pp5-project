@@ -30,22 +30,22 @@ const Delete = ({id, name, email, setArr}) => {
 
             {/* <!-- Delete Modal --> */}
             <div className="modal fade" id={"delModal"+id} tabindex="-1" aria-labelledby="delModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                <div className="modal-header">
-                    <h1 className="modal-title fs-5" id="delModalLabel">Are you sure to delete the record for: <br></br> {name}?</h1>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="delModalLabel">Are you sure to delete the record for: <br></br> {name}?</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                        {name}<br></br>
+                        {email}
+                    </div>
+                    <div className="modal-footer">
+                        <button type="submit" className="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="submit" className="btn btn-danger" title={id} onClick={delBtn} data-bs-dismiss="modal">Yes</button>
+                    </div>
+                    </div>
                 </div>
-                <div className="modal-body">
-                    {name}<br></br>
-                    {email}
-                </div>
-                <div className="modal-footer">
-                    <button type="submit" className="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="submit" className="btn btn-danger" title={id} onClick={delBtn} data-bs-dismiss="modal">Yes</button>
-                </div>
-                </div>
-            </div>
             </div>
         </div>
     )
